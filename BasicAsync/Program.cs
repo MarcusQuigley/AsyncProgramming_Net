@@ -17,8 +17,7 @@ namespace BasicAsync
 
             AyncDelegate();
 
-            Thread t = new Thread(new ThreadStart(MethodonThread));
-            t.
+         
 
             Console.Read();
         }

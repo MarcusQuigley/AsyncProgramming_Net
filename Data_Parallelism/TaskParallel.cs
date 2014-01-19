@@ -22,6 +22,7 @@ namespace Data_Parallelism
         private void buttonDownload_Click(object sender, EventArgs e)
         {
             WebClient wc1 = new WebClient();
+          
             wc1.DownloadStringCompleted += (s, args) =>
                 {
                     theEBook = args.Result;
@@ -31,31 +32,29 @@ namespace Data_Parallelism
 
             wc1.DownloadStringAsync(bookUri);
         }
- 
+
 
         private void buttonGetStats_Click(object sender, EventArgs e)
         {
-            string[] words = theEBook.Split(new char[] 
-            { ' ', '\u000A', ',', '.', ';', ':', '-', '?', '/' }
-                ,StringSplitOptions.RemoveEmptyEntries);
+            string[] words = theEBook.Split(new char[] { ' ', '\u000A', ',', '.', ';', ':', '-', '?', '/' }
+                , StringSplitOptions.RemoveEmptyEntries);
             string longestWord = "";
-            string[] tenMostCommonWords = null; 
+            string[] tenMostCommonWords = null;
 
-Parallel.Invoke(() =>
-    {
-              longestWord = FindLongestWord(words);
-    }, ()=>
-            {
-               tenMostCommonWords = FindTenMostCommonWords(words);
-        });
+            Parallel.Invoke(
+                     () =>
+                        {
+                            longestWord = FindLongestWord(words);
+                        },
+                     () =>
+                        {
+                            tenMostCommonWords = FindTenMostCommonWords(words);
+                        });
 
             foreach (string command in tenMostCommonWords)
                 listBox1.Items.Add(command);
 
             textBoxBook.Text = longestWord;
-
-
-            
 
         }
 

@@ -5,6 +5,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BasicAsync", "BasicAsync\Ba
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Data_Parallelism", "Data_Parallelism\Data_Parallelism.csproj", "{6454472E-6D4D-42F8-8FEA-456B9C7E2084}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleThreading", "SimpleThreading\SimpleThreading.csproj", "{EE1B0FDD-E287-4B01-8157-A8ABF8F0F653}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x86 = Debug|x86
@@ -19,6 +21,10 @@ Global
 		{6454472E-6D4D-42F8-8FEA-456B9C7E2084}.Debug|x86.Build.0 = Debug|x86
 		{6454472E-6D4D-42F8-8FEA-456B9C7E2084}.Release|x86.ActiveCfg = Release|x86
 		{6454472E-6D4D-42F8-8FEA-456B9C7E2084}.Release|x86.Build.0 = Release|x86
+		{EE1B0FDD-E287-4B01-8157-A8ABF8F0F653}.Debug|x86.ActiveCfg = Debug|x86
+		{EE1B0FDD-E287-4B01-8157-A8ABF8F0F653}.Debug|x86.Build.0 = Debug|x86
+		{EE1B0FDD-E287-4B01-8157-A8ABF8F0F653}.Release|x86.ActiveCfg = Release|x86
+		{EE1B0FDD-E287-4B01-8157-A8ABF8F0F653}.Release|x86.Build.0 = Release|x86
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

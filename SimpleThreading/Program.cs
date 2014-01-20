@@ -13,7 +13,9 @@ namespace SimpleThreading
 
           //  StaticVars();
 
-            Threadpools.Program();
+        //    Threadpools.Program();
+
+            ManualResetEventClass.Program();
 
         }
 
